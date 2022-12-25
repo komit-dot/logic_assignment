@@ -56,3 +56,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "activeadmin", "~> 2.12"
 
 gem "devise", "~> 4.8"
+
+gem 'country-select'
+gem 'city-state'
