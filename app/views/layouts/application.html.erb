@@ -13,3 +13,45 @@
     <%= yield %>
   </body>
 </html>
+<script>
+$("#emp_country").on("change", function() {
+  console.log('hello')
+  $.ajax({
+      type: 'get',
+      url: 'get_state_by_country',
+      data: {article_country: this.value},
+      success: function(data) {
+        var states = $('#emp_state');
+        states.empty();
+        var cities = $('#emp_city');
+        cities.empty();
+        $.each(data, function(index, value) {
+          var opt = $('<option/>');
+          opt.attr('value', value[0]);
+          opt.text(value[1]);
+          opt.appendTo(states);
+        });            
+      }
+  });
+});
+
+$("#emp_state").on("change", function() {
+  $.ajax({
+      type: 'get',
+      url: 'get_cities',
+      data: {article_country: $('#emp_country')[0].value, article_state: this.value},
+      success: function(data) {
+        var cities = $('#emp_city');
+        cities.empty();
+        $.each(data, function(index, value) {
+          var opt = $('<option/>');
+          opt.attr('value', value);
+          opt.text(value);
+          opt.appendTo(cities);
+        });            
+      }
+  });
+});
+
+
+</script>
