@@ -4718,3 +4718,1833 @@ Processing by Admin::EmployeesController#get_cities as */*
 Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 8134)
 
 
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddImageToEmployees (20221227092029)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "employees" ADD "image" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221227092029"]]
+  [1m[35m (101.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 14:55:31 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 97.3ms | Allocations: 59163)
+Completed 200 OK in 134ms (Views: 100.6ms | ActiveRecord: 1.4ms | Allocations: 76127)
+
+
+Started GET "/admin/employees/get_state_by_country?article_country=AL" for ::1 at 2022-12-27 14:55:37 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"article_country"=>"AL"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 7835)
+
+
+Started GET "/admin/employees/get_state_by_country?article_country=CA" for ::1 at 2022-12-27 14:55:44 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"article_country"=>"CA"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 314ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 2057960)
+
+
+Started GET "/admin/employees/get_cities?article_country=CA&article_state=MB" for ::1 at 2022-12-27 14:55:48 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"article_country"=>"CA", "article_state"=>"MB"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 7791)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 14:57:12 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 36.7ms | Allocations: 38276)
+Completed 200 OK in 61ms (Views: 37.6ms | ActiveRecord: 1.2ms | Allocations: 52567)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 15:00:39 +0530
+  
+NameError (uninitialized constant Employee (call 'Employee.connection' to establish a connection)::ImageUploader):
+  
+app/models/employee.rb:3:in `<class:Employee>'
+app/models/employee.rb:1:in `<main>'
+app/admin/employees.rb:1:in `<main>'
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 15:04:18 +0530
+  
+NameError (uninitialized constant Employee (call 'Employee.connection' to establish a connection)::ImageUploader):
+  
+app/models/employee.rb:2:in `<class:Employee>'
+app/models/employee.rb:1:in `<main>'
+app/admin/employees.rb:1:in `<main>'
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/admin/employees" for ::1 at 2022-12-27 15:04:23 +0530
+  
+NameError (uninitialized constant Employee (call 'Employee.connection' to establish a connection)::ImageUploader):
+  
+app/models/employee.rb:2:in `<class:Employee>'
+app/models/employee.rb:1:in `<main>'
+app/admin/employees.rb:1:in `<main>'
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/admin/employees" for ::1 at 2022-12-27 15:04:35 +0530
+  
+NameError (uninitialized constant Employee (call 'Employee.connection' to establish a connection)::ImageUploader):
+  
+app/models/employee.rb:2:in `<class:Employee>'
+app/models/employee.rb:1:in `<main>'
+app/admin/employees.rb:1:in `<main>'
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/admin/employees" for ::1 at 2022-12-27 15:13:13 +0530
+  
+NameError (uninitialized constant Employee (call 'Employee.connection' to establish a connection)::ImageUploader):
+  
+app/models/employee.rb:2:in `<class:Employee>'
+app/models/employee.rb:1:in `<main>'
+app/admin/employees.rb:1:in `<main>'
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/admin/employees" for ::1 at 2022-12-27 15:13:15 +0530
+  
+NameError (uninitialized constant Employee (call 'Employee.connection' to establish a connection)::ImageUploader):
+  
+app/models/employee.rb:2:in `<class:Employee>'
+app/models/employee.rb:1:in `<main>'
+app/admin/employees.rb:1:in `<main>'
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/admin/employees" for ::1 at 2022-12-27 15:16:31 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::EmployeesController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/index.html.arb
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/index.html.arb (Duration: 118.1ms | Allocations: 64766)
+Completed 200 OK in 146ms (Views: 121.1ms | ActiveRecord: 1.5ms | Allocations: 76210)
+
+
+Started GET "/admin/employees/5" for ::1 at 2022-12-27 15:16:47 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Employee"], ["resource_id", 5], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Employee"], ["resource_id", 5], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb (Duration: 120.4ms | Allocations: 36274)
+Completed 200 OK in 173ms (Views: 123.1ms | ActiveRecord: 3.2ms | Allocations: 51514)
+
+
+Started GET "/admin/comments" for ::1 at 2022-12-27 15:18:12 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::CommentsController#index as HTML
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ?[0m  [["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Load (0.1ms)[0m  [1m[34mSELECT "active_admin_comments".* FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ? ORDER BY "active_admin_comments"."id" desc LIMIT ? OFFSET ?[0m  [["namespace", "admin"], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."resource_type" FROM "active_admin_comments" ORDER BY resource_type asc[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."author_type" FROM "active_admin_comments" ORDER BY author_type asc[0m
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/index.html.arb (Duration: 81.4ms | Allocations: 35916)
+Completed 200 OK in 105ms (Views: 82.3ms | ActiveRecord: 1.3ms | Allocations: 44755)
+
+
+Started GET "/admin/employees" for ::1 at 2022-12-27 15:18:14 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/index.html.arb
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/index.html.arb (Duration: 50.7ms | Allocations: 44569)
+Completed 200 OK in 67ms (Views: 51.3ms | ActiveRecord: 1.7ms | Allocations: 53378)
+
+
+Started GET "/admin/employees/5" for ::1 at 2022-12-27 15:18:17 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Employee"], ["resource_id", 5], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Employee"], ["resource_id", 5], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb (Duration: 31.1ms | Allocations: 29270)
+Completed 200 OK in 64ms (Views: 31.5ms | ActiveRecord: 1.8ms | Allocations: 43588)
+
+
+Started GET "/admin/employees/5/edit" for ::1 at 2022-12-27 15:18:22 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 89.9ms | Allocations: 42100)
+Completed 200 OK in 117ms (Views: 91.6ms | ActiveRecord: 1.6ms | Allocations: 57303)
+
+
+Started PATCH "/admin/employees/5" for ::1 at 2022-12-27 15:18:59 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#update as HTML
+  Parameters: {"authenticity_token"=>"9SwYH7p1jpU5B5RIPDouYDfmajfK8O7aZJc0ac/fqOtczPJMtUcuJ+DukezfZ2whsjWs3PfnQZL75nFlZR5qSw==", "employee"=>{"emp_name"=>"sss", "emp_email"=>"s@gamail.com", "mobile_number"=>"1111", "emp_country"=>"AD", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f7650756a98 @tempfile=#<Tempfile:/tmp/RackMultipart20221227-18451-qnzhi9.png>, @original_filename="Screenshot from 2022-12-08 09-50-06.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"employee[image]\"; filename=\"Screenshot from 2022-12-08 09-50-06.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update Employee", "id"=>"5"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Update (0.6ms)[0m  [1m[33mUPDATE "employees" SET "emp_country" = ?, "image" = ?, "updated_at" = ? WHERE "employees"."id" = ?[0m  [["emp_country", "AD"], ["image", "Screenshot_from_2022-12-08_09-50-06.png"], ["updated_at", "2022-12-27 09:49:00.016717"], ["id", 5]]
+  [1m[35m (129.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/employees/5
+Completed 302 Found in 265ms (ActiveRecord: 132.2ms | Allocations: 30359)
+
+
+Started GET "/admin/employees/5" for ::1 at 2022-12-27 15:19:00 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Employee"], ["resource_id", 5], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Employee"], ["resource_id", 5], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb (Duration: 47.3ms | Allocations: 29297)
+Completed 200 OK in 84ms (Views: 48.0ms | ActiveRecord: 2.6ms | Allocations: 43627)
+
+
+Started GET "/admin/employees/5" for ::1 at 2022-12-27 15:43:37 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::EmployeesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Employee"], ["resource_id", 5], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Employee"], ["resource_id", 5], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb (Duration: 397.6ms | Allocations: 119590)
+Completed 200 OK in 436ms (Views: 399.6ms | ActiveRecord: 3.3ms | Allocations: 136551)
+
+
+Started GET "/admin/employees/5/edit" for ::1 at 2022-12-27 15:43:52 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 39.9ms | Allocations: 43015)
+Completed 200 OK in 69ms (Views: 41.6ms | ActiveRecord: 1.5ms | Allocations: 58200)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AE" for ::1 at 2022-12-27 15:44:05 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AE"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7707)
+
+
+Started GET "/admin/employees/get_cities?country=AE&state=AZ" for ::1 at 2022-12-27 15:44:07 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"country"=>"AE", "state"=>"AZ"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 7799)
+
+
+Started PATCH "/admin/employees/5" for ::1 at 2022-12-27 15:44:27 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#update as HTML
+  Parameters: {"authenticity_token"=>"13VCGOpluqx5tt8oVANGB95aHbue/jtR1kCNk1oyQc9+lahL5VcaHqBf2oy3XgRGW4nbUKPplBlJMcif8PODbw==", "employee"=>{"emp_name"=>"sss", "emp_email"=>"s@gamail.com", "mobile_number"=>"1111", "emp_country"=>"AE", "emp_state"=>"AZ", "emp_city"=>"Al Ain City", "image"=>#<ActionDispatch::Http::UploadedFile:0x000055cb265c9aa8 @tempfile=#<Tempfile:/tmp/RackMultipart20221227-19354-1hhzok9.png>, @original_filename="Screenshot from 2022-12-08 09-50-06.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"employee[image]\"; filename=\"Screenshot from 2022-12-08 09-50-06.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update Employee", "id"=>"5"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Update (0.3ms)[0m  [1m[33mUPDATE "employees" SET "emp_country" = ?, "emp_state" = ?, "emp_city" = ?, "image" = ?, "updated_at" = ? WHERE "employees"."id" = ?[0m  [["emp_country", "AE"], ["emp_state", "AZ"], ["emp_city", "Al Ain City"], ["image", "Screenshot_from_2022-12-08_09-50-06.png"], ["updated_at", "2022-12-27 10:14:27.838363"], ["id", 5]]
+  [1m[35m (391.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/employees/5
+Completed 302 Found in 467ms (ActiveRecord: 393.2ms | Allocations: 24973)
+
+
+Started GET "/admin/employees/5" for ::1 at 2022-12-27 15:44:28 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Employee"], ["resource_id", 5], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Employee"], ["resource_id", 5], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb (Duration: 31.5ms | Allocations: 29276)
+Completed 200 OK in 58ms (Views: 31.9ms | ActiveRecord: 1.6ms | Allocations: 43644)
+
+
+Started GET "/admin/employees/5/edit" for ::1 at 2022-12-27 15:47:51 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 44.1ms | Allocations: 39131)
+Completed 200 OK in 69ms (Views: 45.1ms | ActiveRecord: 1.5ms | Allocations: 53433)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AL" for ::1 at 2022-12-27 15:48:04 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AL"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7808)
+
+
+Started GET "/admin/employees" for ::1 at 2022-12-27 15:48:08 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/index.html.arb
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/index.html.arb (Duration: 64.1ms | Allocations: 46285)
+Completed 200 OK in 84ms (Views: 66.3ms | ActiveRecord: 1.6ms | Allocations: 56166)
+
+
+Started GET "/admin/employees/5" for ::1 at 2022-12-27 15:48:12 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Employee"], ["resource_id", 5], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Employee"], ["resource_id", 5], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb (Duration: 38.6ms | Allocations: 29092)
+Completed 200 OK in 64ms (Views: 39.3ms | ActiveRecord: 1.6ms | Allocations: 43407)
+
+
+Started GET "/admin/employees/5/edit" for ::1 at 2022-12-27 15:48:16 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 34.9ms | Allocations: 39130)
+Completed 200 OK in 60ms (Views: 35.6ms | ActiveRecord: 1.5ms | Allocations: 53476)
+
+
+Started GET "/admin/employees" for ::1 at 2022-12-27 15:48:24 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#index as HTML
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/index.html.arb
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/index.html.arb (Duration: 50.8ms | Allocations: 44717)
+Completed 200 OK in 66ms (Views: 51.3ms | ActiveRecord: 1.3ms | Allocations: 53547)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 15:48:41 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 36.5ms | Allocations: 39094)
+Completed 200 OK in 62ms (Views: 37.4ms | ActiveRecord: 1.4ms | Allocations: 53420)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 15:56:29 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 31.8ms | Allocations: 25502)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 1.5ms | Allocations: 39818)
+
+
+  
+ActionView::Template::Error (undefined method `country' for nil:NilClass):
+    1: # frozen_string_literal: true
+    2: insert_tag renderer_for(:edit)
+  
+app/admin/employees.rb:9:in `block (3 levels) in <main>'
+app/admin/employees.rb:5:in `block (2 levels) in <main>'
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 15:57:02 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 64.0ms | Allocations: 27502)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 1.5ms | Allocations: 41943)
+
+
+  
+ActionView::Template::Error (undefined method `country' for #<Employee:0x00007f5b189c95f8>
+Did you mean?  emp_country):
+    1: # frozen_string_literal: true
+    2: insert_tag renderer_for(:edit)
+  
+app/admin/employees.rb:9:in `block (3 levels) in <main>'
+app/admin/employees.rb:5:in `block (2 levels) in <main>'
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 15:57:04 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 34.9ms | Allocations: 27450)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 1.5ms | Allocations: 41809)
+
+
+  
+ActionView::Template::Error (undefined method `country' for #<Employee:0x00007f5b207df870>
+Did you mean?  emp_country):
+    1: # frozen_string_literal: true
+    2: insert_tag renderer_for(:edit)
+  
+app/admin/employees.rb:9:in `block (3 levels) in <main>'
+app/admin/employees.rb:5:in `block (2 levels) in <main>'
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 15:57:44 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 40.3ms | Allocations: 39097)
+Completed 200 OK in 70ms (Views: 41.1ms | ActiveRecord: 1.6ms | Allocations: 53447)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:00:34 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 286.8ms | Allocations: 100587)
+Completed 200 OK in 313ms (Views: 287.7ms | ActiveRecord: 1.6ms | Allocations: 114883)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:01:10 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 45.9ms | Allocations: 38974)
+Completed 200 OK in 75ms (Views: 46.8ms | ActiveRecord: 1.8ms | Allocations: 53329)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AG" for ::1 at 2022-12-27 16:02:37 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AG"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7691)
+
+
+Started GET "/admin/employees/get_cities?country=AG&state=05%2CParish%20of%20Saint%20Mary" for ::1 at 2022-12-27 16:03:40 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"country"=>"AG", "state"=>"05,Parish of Saint Mary"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 7706)
+
+
+Started GET "/admin/employees/get_cities?country=AG&state=07%2CParish%20of%20Saint%20Peter" for ::1 at 2022-12-27 16:03:45 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"country"=>"AG", "state"=>"07,Parish of Saint Peter"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 7560)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:04:34 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 251.2ms | Allocations: 98767)
+Completed 200 OK in 296ms (Views: 252.1ms | ActiveRecord: 2.0ms | Allocations: 113085)
+
+
+Started GET "/admin/employees/get_state_by_country" for ::1 at 2022-12-27 16:04:39 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 7581)
+
+
+Started GET "/admin/employees/get_state_by_country" for ::1 at 2022-12-27 16:04:46 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 7537)
+
+
+Started GET "/admin/employees/get_state_by_country" for ::1 at 2022-12-27 16:04:55 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 7542)
+
+
+Started GET "/admin/employees/get_state_by_country" for ::1 at 2022-12-27 16:05:00 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 7544)
+
+
+Started GET "/admin/employees/get_state_by_country" for ::1 at 2022-12-27 16:05:11 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 7527)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:06:08 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 353.0ms | Allocations: 98758)
+Completed 200 OK in 382ms (Views: 353.8ms | ActiveRecord: 1.6ms | Allocations: 113105)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AG" for ::1 at 2022-12-27 16:06:12 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AG"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 7682)
+
+
+Started GET "/admin/employees/get_cities?country=AG&state=04" for ::1 at 2022-12-27 16:06:15 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"country"=>"AG", "state"=>"04"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7544)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AL" for ::1 at 2022-12-27 16:06:25 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AL"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7716)
+
+
+Started GET "/admin/employees/get_cities?country=AL&state=03" for ::1 at 2022-12-27 16:06:32 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"country"=>"AL", "state"=>"03"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7880)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:07:59 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 322.4ms | Allocations: 98708)
+Completed 200 OK in 353ms (Views: 323.3ms | ActiveRecord: 1.5ms | Allocations: 113042)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AI" for ::1 at 2022-12-27 16:08:04 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AI"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 7586)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AE" for ::1 at 2022-12-27 16:08:10 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AE"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7652)
+
+
+Started GET "/admin/employees/get_cities?country=AE&state=AZ" for ::1 at 2022-12-27 16:08:13 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"country"=>"AE", "state"=>"AZ"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 7563)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:09:31 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 472.9ms | Allocations: 99309)
+Completed 200 OK in 500ms (Views: 473.8ms | ActiveRecord: 1.3ms | Allocations: 113615)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AE" for ::1 at 2022-12-27 16:09:35 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AE"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7686)
+
+
+Started GET "/admin/employees/get_cities?country=AE&state=AZ" for ::1 at 2022-12-27 16:09:39 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"country"=>"AE", "state"=>"AZ"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 7565)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:11:09 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 407.4ms | Allocations: 99656)
+Completed 200 OK in 440ms (Views: 408.6ms | ActiveRecord: 1.8ms | Allocations: 113956)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AE" for ::1 at 2022-12-27 16:11:13 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AE"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 7686)
+
+
+Started GET "/admin/employees/get_cities?country=AE&state=AZ" for ::1 at 2022-12-27 16:11:15 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"country"=>"AE", "state"=>"AZ"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7575)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:13:15 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 330.0ms | Allocations: 99263)
+Completed 200 OK in 362ms (Views: 330.8ms | ActiveRecord: 1.4ms | Allocations: 113578)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AE" for ::1 at 2022-12-27 16:13:20 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AE"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7676)
+
+
+Started GET "/admin/employees/get_cities?country=AE&state=AZ" for ::1 at 2022-12-27 16:13:22 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"country"=>"AE", "state"=>"AZ"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 7565)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:13:41 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 334.9ms | Allocations: 99851)
+Completed 200 OK in 371ms (Views: 335.9ms | ActiveRecord: 1.5ms | Allocations: 114163)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AE" for ::1 at 2022-12-27 16:13:44 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AE"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7662)
+
+
+Started GET "/admin/employees/get_cities?country=AE&state=AZ" for ::1 at 2022-12-27 16:13:47 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"country"=>"AE", "state"=>"AZ"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7543)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:14:28 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 336.3ms | Allocations: 98130)
+Completed 200 OK in 368ms (Views: 337.3ms | ActiveRecord: 1.6ms | Allocations: 112486)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AE" for ::1 at 2022-12-27 16:14:31 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AE"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7676)
+
+
+Started GET "/admin/employees/get_cities?country=AE&state=AZ" for ::1 at 2022-12-27 16:14:34 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"country"=>"AE", "state"=>"AZ"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 7537)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:24:03 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 40.0ms | Allocations: 38975)
+Completed 200 OK in 66ms (Views: 40.8ms | ActiveRecord: 1.4ms | Allocations: 53283)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:26:09 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 44.6ms | Allocations: 38974)
+Completed 200 OK in 73ms (Views: 45.4ms | ActiveRecord: 1.6ms | Allocations: 53335)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AE" for ::1 at 2022-12-27 16:26:20 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AE"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 7653)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AF" for ::1 at 2022-12-27 16:26:27 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AF"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7602)
+
+
+Started GET "/admin/employees/get_cities?country=AF&state=KAB" for ::1 at 2022-12-27 16:26:31 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"country"=>"AF", "state"=>"KAB"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 7635)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:26:36 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 49.9ms | Allocations: 38977)
+Completed 200 OK in 78ms (Views: 50.8ms | ActiveRecord: 1.6ms | Allocations: 53282)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:28:38 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 129.9ms | Allocations: 78877)
+Completed 200 OK in 167ms (Views: 133.0ms | ActiveRecord: 1.4ms | Allocations: 95839)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:28:48 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 46.6ms | Allocations: 56841)
+Completed 200 OK in 72ms (Views: 47.5ms | ActiveRecord: 1.5ms | Allocations: 71212)
+
+
+Started GET "/admin/employees/get_state_by_country?country=Ireland" for ::1 at 2022-12-27 16:29:02 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"Ireland"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 337ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 2034782)
+
+
+Started GET "/admin/employees/get_state_by_country?country=Hong%20Kong" for ::1 at 2022-12-27 16:29:06 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"Hong Kong"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 328ms (Views: 0.6ms | ActiveRecord: 0.7ms | Allocations: 2034799)
+
+
+Started GET "/admin/employees/get_state_by_country?country=GS" for ::1 at 2022-12-27 16:29:10 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"GS"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 305ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 2034788)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:30:10 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 52.6ms | Allocations: 56994)
+Completed 200 OK in 80ms (Views: 53.4ms | ActiveRecord: 1.5ms | Allocations: 71368)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:30:25 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 108.7ms | Allocations: 76833)
+Completed 200 OK in 146ms (Views: 112.1ms | ActiveRecord: 1.6ms | Allocations: 93787)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:31:04 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 113.1ms | Allocations: 62102)
+Completed 200 OK in 153ms (Views: 116.6ms | ActiveRecord: 1.4ms | Allocations: 79068)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:31:32 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 109.5ms | Allocations: 77078)
+Completed 200 OK in 144ms (Views: 112.8ms | ActiveRecord: 1.4ms | Allocations: 94042)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:32:32 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 52.3ms | Allocations: 54904)
+Completed 200 OK in 83ms (Views: 53.2ms | ActiveRecord: 1.5ms | Allocations: 69332)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:32:55 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 52.9ms | Allocations: 54984)
+Completed 200 OK in 80ms (Views: 53.7ms | ActiveRecord: 1.3ms | Allocations: 69351)
+
+
+Started GET "/admin/employees/get_state_by_country?country=Haiti" for ::1 at 2022-12-27 16:33:05 +0530
+Started GET "/admin/employees/get_state_by_country?country=Indonesia" for ::1 at 2022-12-27 16:33:05 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"Indonesia"}
+  Parameters: {"country"=>"Haiti"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 907ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 3987049)
+
+
+Completed 200 OK in 934ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 4063892)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:33:38 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 109.4ms | Allocations: 61109)
+Completed 200 OK in 147ms (Views: 113.5ms | ActiveRecord: 1.5ms | Allocations: 78069)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:35:01 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1525)
+
+
+  
+SyntaxError (/home/ubuntu2004/Desktop/komit_ruby_project/logic_assignment/app/helpers/application_helper.rb:3: syntax error, unexpected '}', expecting ']'
+...t{|u| [u[1], "#{u[0]},#{u[1]}"}
+...                              ^
+):
+  
+app/helpers/application_helper.rb:3: syntax error, unexpected '}', expecting ']'
+app/helpers/application_helper.rb:3: syntax error, unexpected '}', expecting ']'
+app/helpers/application_helper.rb:3: syntax error, unexpected '}', expecting ']'
+app/controllers/application_controller.rb:1:in `<main>'
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:35:56 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1517)
+
+
+  
+SyntaxError (/home/ubuntu2004/Desktop/komit_ruby_project/logic_assignment/app/helpers/application_helper.rb:3: syntax error, unexpected '}', expecting ']'
+...collect{|u| [u[1], u.join(',')}
+...                              ^
+):
+  
+app/helpers/application_helper.rb:3: syntax error, unexpected '}', expecting ']'
+app/helpers/application_helper.rb:3: syntax error, unexpected '}', expecting ']'
+app/helpers/application_helper.rb:3: syntax error, unexpected '}', expecting ']'
+app/controllers/application_controller.rb:1:in `<main>'
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:35:58 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1511)
+
+
+  
+SyntaxError (/home/ubuntu2004/Desktop/komit_ruby_project/logic_assignment/app/helpers/application_helper.rb:3: syntax error, unexpected '}', expecting ']'
+...collect{|u| [u[1], u.join(',')}
+...                              ^
+):
+  
+app/helpers/application_helper.rb:3: syntax error, unexpected '}', expecting ']'
+app/helpers/application_helper.rb:3: syntax error, unexpected '}', expecting ']'
+app/helpers/application_helper.rb:3: syntax error, unexpected '}', expecting ']'
+app/controllers/application_controller.rb:1:in `<main>'
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:36:15 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 45.6ms | Allocations: 39450)
+Completed 200 OK in 75ms (Views: 46.7ms | ActiveRecord: 1.4ms | Allocations: 53959)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:36:31 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 35.4ms | Allocations: 39126)
+Completed 200 OK in 70ms (Views: 36.3ms | ActiveRecord: 1.4ms | Allocations: 53531)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:36:42 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 32.3ms | Allocations: 39119)
+Completed 200 OK in 55ms (Views: 33.0ms | ActiveRecord: 1.1ms | Allocations: 53470)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:36:55 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 96.2ms | Allocations: 62024)
+Completed 200 OK in 133ms (Views: 99.6ms | ActiveRecord: 1.6ms | Allocations: 78976)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AF%2CAfghanistan" for ::1 at 2022-12-27 16:37:06 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AF,Afghanistan"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 622ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 2034834)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AE%2CUnited%20Arab%20Emirates" for ::1 at 2022-12-27 16:37:08 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AE,United Arab Emirates"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 315ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 2034803)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:37:57 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 257.8ms | Allocations: 108455)
+Completed 200 OK in 284ms (Views: 258.8ms | ActiveRecord: 1.4ms | Allocations: 122805)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AE" for ::1 at 2022-12-27 16:38:00 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AE"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7723)
+
+
+Started GET "/admin/employees/get_cities?country=AE%2CUnited%20Arab%20Emirates&state=AZ" for ::1 at 2022-12-27 16:38:03 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"country"=>"AE,United Arab Emirates", "state"=>"AZ"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 123ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7580)
+
+
+Started GET "/admin/employees/get_cities?country=AE%2CUnited%20Arab%20Emirates&state=DU" for ::1 at 2022-12-27 16:38:14 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"country"=>"AE,United Arab Emirates", "state"=>"DU"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 7554)
+
+
+Started GET "/admin/employees/get_cities?country=AE%2CUnited%20Arab%20Emirates&state=RK" for ::1 at 2022-12-27 16:38:19 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"country"=>"AE,United Arab Emirates", "state"=>"RK"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 7531)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:39:51 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 239.5ms | Allocations: 99007)
+Completed 200 OK in 273ms (Views: 240.5ms | ActiveRecord: 1.4ms | Allocations: 113350)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AE" for ::1 at 2022-12-27 16:39:55 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AE"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7694)
+
+
+Started GET "/admin/employees/get_cities?country=AE&state=AZ" for ::1 at 2022-12-27 16:39:58 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"country"=>"AE", "state"=>"AZ"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7621)
+
+
+Started PATCH "/admin/employees/3" for ::1 at 2022-12-27 16:40:12 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#update as HTML
+  Parameters: {"authenticity_token"=>"F/9tF/msxhj0Q6JeXEegUpb4bzHopXmQBm80+bXD8HG+H4dE9p5mqi2qp/q/GuITEyup2tWy1tiZHnH1HwIy0Q==", "employee"=>{"emp_name"=>"c", "emp_email"=>"c@gmail.com", "mobile_number"=>"1236", "emp_country"=>"AE,United Arab Emirates", "emp_state"=>"AZ,Abu Dhabi", "emp_city"=>"Abu Dhabi", "image"=>#<ActionDispatch::Http::UploadedFile:0x00005616b1033018 @tempfile=#<Tempfile:/tmp/RackMultipart20221227-22727-slb5w1.png>, @original_filename="Screenshot from 2022-12-24 18-57-59.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"employee[image]\"; filename=\"Screenshot from 2022-12-24 18-57-59.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update Employee", "id"=>"3"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Update (0.4ms)[0m  [1m[33mUPDATE "employees" SET "emp_country" = ?, "emp_state" = ?, "emp_city" = ?, "image" = ?, "updated_at" = ? WHERE "employees"."id" = ?[0m  [["emp_country", "AE,United Arab Emirates"], ["emp_state", "AZ,Abu Dhabi"], ["emp_city", "Abu Dhabi"], ["image", "Screenshot_from_2022-12-24_18-57-59.png"], ["updated_at", "2022-12-27 11:10:13.097002"], ["id", 3]]
+  [1m[35m (127.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/employees/3
+Completed 302 Found in 200ms (ActiveRecord: 129.2ms | Allocations: 24945)
+
+
+Started GET "/admin/employees/3" for ::1 at 2022-12-27 16:40:13 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Employee"], ["resource_id", 3], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Employee"], ["resource_id", 3], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb (Duration: 42.4ms | Allocations: 35820)
+Completed 200 OK in 73ms (Views: 44.4ms | ActiveRecord: 2.4ms | Allocations: 51071)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:45:04 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 36.9ms | Allocations: 39750)
+Completed 200 OK in 64ms (Views: 37.6ms | ActiveRecord: 1.3ms | Allocations: 54111)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AG" for ::1 at 2022-12-27 16:45:09 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AG"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7712)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:45:45 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 47.9ms | Allocations: 39750)
+Completed 200 OK in 79ms (Views: 49.0ms | ActiveRecord: 1.5ms | Allocations: 54061)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:45:56 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 36.2ms | Allocations: 39750)
+Completed 200 OK in 67ms (Views: 37.0ms | ActiveRecord: 1.8ms | Allocations: 54096)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AE" for ::1 at 2022-12-27 16:46:06 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AE"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7675)
+
+
+Started GET "/admin/employees/get_cities?country=AE&state=AZ" for ::1 at 2022-12-27 16:46:09 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"country"=>"AE", "state"=>"AZ"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 7529)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:46:38 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 40.2ms | Allocations: 39753)
+Completed 200 OK in 69ms (Views: 41.2ms | ActiveRecord: 1.6ms | Allocations: 54085)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:46:41 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 49.6ms | Allocations: 39753)
+Completed 200 OK in 77ms (Views: 50.4ms | ActiveRecord: 1.4ms | Allocations: 54097)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:49:06 +0530
+  
+SyntaxError (/home/ubuntu2004/Desktop/komit_ruby_project/logic_assignment/app/admin/employees.rb:10: syntax error, unexpected ','
+...ion: [], prompt: '--select--',, selected: employee.emp_state...
+...                              ^
+):
+  
+app/admin/employees.rb:10: syntax error, unexpected ','
+app/admin/employees.rb:10: syntax error, unexpected ','
+app/admin/employees.rb:10: syntax error, unexpected ','
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:55:55 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 97.8ms | Allocations: 62035)
+Completed 200 OK in 136ms (Views: 100.7ms | ActiveRecord: 1.3ms | Allocations: 79004)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AF" for ::1 at 2022-12-27 16:55:59 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AF"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7679)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AL" for ::1 at 2022-12-27 16:56:02 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AL"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 7794)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AS" for ::1 at 2022-12-27 16:56:05 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AS"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 302ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 2035116)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AG" for ::1 at 2022-12-27 16:56:08 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AG"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 7721)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AM" for ::1 at 2022-12-27 16:56:11 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AM"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 304ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 2035455)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:56:52 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 48.1ms | Allocations: 39986)
+Completed 200 OK in 78ms (Views: 48.9ms | ActiveRecord: 1.6ms | Allocations: 54322)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:57:40 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 41.6ms | Allocations: 39924)
+Completed 200 OK in 80ms (Views: 42.5ms | ActiveRecord: 1.6ms | Allocations: 54282)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AL" for ::1 at 2022-12-27 16:58:25 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AL"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7735)
+
+
+Started GET "/admin/employees/get_cities?country=AL&state=01" for ::1 at 2022-12-27 16:58:28 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"country"=>"AL", "state"=>"01"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7641)
+
+
+Started PATCH "/admin/employees/3" for ::1 at 2022-12-27 16:58:33 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#update as HTML
+  Parameters: {"authenticity_token"=>"gaQ6TlLslOe2ZSTmoVIs10AZcHnDpM7DKjpeYh1uhCcoRNAdXd40VW+MIUJCD26Wxcq2kv6zYYu1Sxtut69Ghw==", "employee"=>{"emp_name"=>"c", "emp_email"=>"c@gmail.com", "mobile_number"=>"1236", "emp_country"=>"AL,Albania", "emp_state"=>"01,Qarku i Beratit", "emp_city"=>"Berat"}, "commit"=>"Update Employee", "id"=>"3"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Update (0.3ms)[0m  [1m[33mUPDATE "employees" SET "emp_country" = ?, "emp_state" = ?, "emp_city" = ?, "updated_at" = ? WHERE "employees"."id" = ?[0m  [["emp_country", "AL,Albania"], ["emp_state", "01,Qarku i Beratit"], ["emp_city", "Berat"], ["updated_at", "2022-12-27 11:28:34.084021"], ["id", 3]]
+  [1m[35m (187.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/employees/3
+Completed 302 Found in 229ms (ActiveRecord: 189.0ms | Allocations: 24230)
+
+
+Started GET "/admin/employees/3" for ::1 at 2022-12-27 16:58:34 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Employee"], ["resource_id", 3], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Employee"], ["resource_id", 3], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb (Duration: 42.4ms | Allocations: 35955)
+Completed 200 OK in 71ms (Views: 43.6ms | ActiveRecord: 2.5ms | Allocations: 51185)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:58:44 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 47.2ms | Allocations: 39925)
+Completed 200 OK in 74ms (Views: 48.1ms | ActiveRecord: 1.5ms | Allocations: 54281)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:58:55 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 42.1ms | Allocations: 39924)
+Completed 200 OK in 71ms (Views: 43.0ms | ActiveRecord: 1.5ms | Allocations: 54258)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AG" for ::1 at 2022-12-27 16:59:03 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AG"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7673)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AL" for ::1 at 2022-12-27 16:59:08 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AL"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 7707)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:59:41 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 49.8ms | Allocations: 39973)
+Completed 200 OK in 81ms (Views: 50.7ms | ActiveRecord: 1.5ms | Allocations: 54287)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 16:59:52 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 99.1ms | Allocations: 39988)
+Completed 200 OK in 145ms (Views: 100.1ms | ActiveRecord: 1.6ms | Allocations: 54340)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AG" for ::1 at 2022-12-27 16:59:56 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AG"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7681)
+
+
+Started GET "/admin/employees/get_cities?country=AG&state=04" for ::1 at 2022-12-27 16:59:58 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"country"=>"AG", "state"=>"04"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7588)
+
+
+Started PATCH "/admin/employees/3" for ::1 at 2022-12-27 17:00:04 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#update as HTML
+  Parameters: {"authenticity_token"=>"BfQaiFvLucGMs7vLb0DnWquJb7dqLKkyvHnGbzmvsgmsFPDbVPkZc1Vavm+MHaUbLlqpXFc7BnojCINjk25wqQ==", "employee"=>{"emp_name"=>"c", "emp_email"=>"c@gmail.com", "mobile_number"=>"1236", "emp_country"=>"AG,Antigua and Barbuda", "emp_state"=>"04,Parish of Saint John", "emp_city"=>"Potters Village"}, "commit"=>"Update Employee", "id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Update (0.3ms)[0m  [1m[33mUPDATE "employees" SET "emp_country" = ?, "emp_state" = ?, "emp_city" = ?, "updated_at" = ? WHERE "employees"."id" = ?[0m  [["emp_country", "AG,Antigua and Barbuda"], ["emp_state", "04,Parish of Saint John"], ["emp_city", "Potters Village"], ["updated_at", "2022-12-27 11:30:04.398109"], ["id", 3]]
+  [1m[35m (221.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/employees/3
+Completed 302 Found in 256ms (ActiveRecord: 223.5ms | Allocations: 21016)
+
+
+Started GET "/admin/employees/3" for ::1 at 2022-12-27 17:00:04 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Employee"], ["resource_id", 3], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Employee"], ["resource_id", 3], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb (Duration: 32.7ms | Allocations: 29303)
+Completed 200 OK in 59ms (Views: 33.2ms | ActiveRecord: 1.8ms | Allocations: 43672)
+
+
+Started GET "/admin/employees/3" for ::1 at 2022-12-27 17:02:21 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Employee"], ["resource_id", 3], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Employee"], ["resource_id", 3], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb (Duration: 34.3ms | Allocations: 29241)
+Completed 200 OK in 61ms (Views: 34.8ms | ActiveRecord: 1.7ms | Allocations: 43588)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 17:02:24 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 33.4ms | Allocations: 40198)
+Completed 200 OK in 58ms (Views: 34.2ms | ActiveRecord: 1.3ms | Allocations: 54538)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 17:03:38 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 48.7ms | Allocations: 40231)
+Completed 200 OK in 77ms (Views: 49.5ms | ActiveRecord: 1.5ms | Allocations: 54574)
+
+
+Started GET "/admin/employees/3/edit" for ::1 at 2022-12-27 17:05:25 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 46.5ms | Allocations: 40308)
+Completed 200 OK in 75ms (Views: 47.3ms | ActiveRecord: 1.7ms | Allocations: 54652)
+
+
+Started GET "/admin/employees" for ::1 at 2022-12-27 17:05:36 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#index as HTML
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/index.html.arb
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" ORDER BY "employees"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/index.html.arb (Duration: 61.1ms | Allocations: 46328)
+Completed 200 OK in 78ms (Views: 62.6ms | ActiveRecord: 1.4ms | Allocations: 56261)
+
+
+Started GET "/admin/employees/new" for ::1 at 2022-12-27 17:05:58 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/new.html.arb
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/new.html.arb (Duration: 132.0ms | Allocations: 38740)
+Completed 200 OK in 156ms (Views: 134.2ms | ActiveRecord: 1.2ms | Allocations: 52738)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AE" for ::1 at 2022-12-27 17:06:19 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AE"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7722)
+
+
+Started GET "/admin/employees/new" for ::1 at 2022-12-27 17:06:46 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/new.html.arb
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/new.html.arb (Duration: 56.3ms | Allocations: 37340)
+Completed 200 OK in 91ms (Views: 57.5ms | ActiveRecord: 1.6ms | Allocations: 50458)
+
+
+Started GET "/admin/employees/new" for ::1 at 2022-12-27 17:07:36 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#new as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/new.html.arb
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/new.html.arb (Duration: 50.0ms | Allocations: 37337)
+Completed 200 OK in 83ms (Views: 50.8ms | ActiveRecord: 1.7ms | Allocations: 50460)
+
+
+Started GET "/admin/employees/get_state_by_country?country=AE" for ::1 at 2022-12-27 17:08:06 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"AE"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7665)
+
+
+Started GET "/admin/employees/get_cities?country=AE&state=DU" for ::1 at 2022-12-27 17:08:10 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"country"=>"AE", "state"=>"DU"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7641)
+
+
+Started GET "/admin/employees/new" for ::1 at 2022-12-27 17:08:14 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/new.html.arb
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/new.html.arb (Duration: 55.7ms | Allocations: 37340)
+Completed 200 OK in 87ms (Views: 56.6ms | ActiveRecord: 1.5ms | Allocations: 50431)
+
+
+Started GET "/admin/employees/new" for ::1 at 2022-12-27 17:08:17 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#new as HTML
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/new.html.arb
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/new.html.arb (Duration: 38.1ms | Allocations: 37348)
+Completed 200 OK in 66ms (Views: 39.4ms | ActiveRecord: 1.1ms | Allocations: 50482)
+
+
+Started GET "/admin/employees/get_state_by_country?country=CH" for ::1 at 2022-12-27 17:08:45 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_state_by_country as */*
+  Parameters: {"country"=>"CH"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 442ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 2050408)
+
+
+Started GET "/admin/employees/get_cities?country=CH&state=AG" for ::1 at 2022-12-27 17:08:49 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#get_cities as */*
+  Parameters: {"country"=>"CH", "state"=>"AG"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 24ms (Views: 0.7ms | ActiveRecord: 0.6ms | Allocations: 16695)
+
+
+Started POST "/admin/employees" for ::1 at 2022-12-27 17:09:02 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#create as HTML
+  Parameters: {"authenticity_token"=>"rWbU+O3XH0QMa4aJDqhGNgoTZ2wDjZCPLDyrXZMs8wsEhj6r4uW/9tWCgy3t9QR3j8Chhz6aP8ezTe5ROe0xqw==", "employee"=>{"emp_name"=>"sds", "emp_email"=>"ss", "mobile_number"=>"5555", "emp_country"=>"CH,Switzerland", "emp_state"=>"AG,Aargau", "emp_city"=>"Aarburg", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f5df431c1e0 @tempfile=#<Tempfile:/tmp/RackMultipart20221227-23919-1xguc6y.png>, @original_filename="Screenshot from 2022-12-24 18-57-59.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"employee[image]\"; filename=\"Screenshot from 2022-12-24 18-57-59.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Employee"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (1.0ms)[0m  [1m[32mINSERT INTO "employees" ("emp_name", "emp_email", "mobile_number", "emp_country", "emp_state", "emp_city", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["emp_name", "sds"], ["emp_email", "ss"], ["mobile_number", 5555], ["emp_country", "CH,Switzerland"], ["emp_state", "AG,Aargau"], ["emp_city", "Aarburg"], ["created_at", "2022-12-27 11:39:02.442604"], ["updated_at", "2022-12-27 11:39:02.442604"], ["image", "Screenshot_from_2022-12-24_18-57-59.png"]]
+  [1m[35m (281.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/employees/7
+Completed 302 Found in 430ms (ActiveRecord: 283.6ms | Allocations: 23117)
+
+
+Started GET "/admin/employees/7" for ::1 at 2022-12-27 17:09:02 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Employee"], ["resource_id", 7], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Employee"], ["resource_id", 7], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb (Duration: 70.2ms | Allocations: 29297)
+Completed 200 OK in 96ms (Views: 69.9ms | ActiveRecord: 2.4ms | Allocations: 43644)
+
+
+Started GET "/admin/employees/7/edit" for ::1 at 2022-12-27 17:09:22 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 49.9ms | Allocations: 46320)
+Completed 200 OK in 76ms (Views: 50.8ms | ActiveRecord: 1.4ms | Allocations: 60656)
+
+
+Started PATCH "/admin/employees/7" for ::1 at 2022-12-27 17:10:08 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#update as HTML
+  Parameters: {"authenticity_token"=>"OzSMbsf1IKAz4bdfYBQUJ/ugzg2ceUDK/iRXEMP8PMKS1GY9yMeAEuoIsvuDSVZmfnMI5qFu74JhVRIcaT3+Yg==", "employee"=>{"emp_name"=>"sds", "emp_email"=>"ss", "mobile_number"=>"5555", "emp_country"=>"CH,Switzerland", "emp_state"=>"AG,Aargau", "emp_city"=>"Aarburg"}, "commit"=>"Update Employee", "id"=>"7"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/employees/7
+Completed 302 Found in 28ms (ActiveRecord: 1.4ms | Allocations: 16809)
+
+
+Started GET "/admin/employees/7" for ::1 at 2022-12-27 17:10:08 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Employee"], ["resource_id", 7], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Employee"], ["resource_id", 7], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb (Duration: 31.6ms | Allocations: 29297)
+Completed 200 OK in 64ms (Views: 32.1ms | ActiveRecord: 1.6ms | Allocations: 43645)
+
+
+Started GET "/admin/employees/7" for ::1 at 2022-12-27 17:11:39 +0530
+  
+SyntaxError (/home/ubuntu2004/Desktop/komit_ruby_project/logic_assignment/app/admin/employees.rb:10: syntax error, unexpected ':', expecting `end'
+...select, collection: get_state : [], selected: employee.emp_s...
+...                              ^
+/home/ubuntu2004/Desktop/komit_ruby_project/logic_assignment/app/admin/employees.rb:10: syntax error, unexpected tLABEL, expecting '='
+...ed: employee.emp_state, prompt: '---select---'
+...                        ^~~~~~~
+/home/ubuntu2004/Desktop/komit_ruby_project/logic_assignment/app/admin/employees.rb:15: syntax error, unexpected `end', expecting end-of-input
+  end
+  ^~~
+):
+  
+app/admin/employees.rb:10: syntax error, unexpected ':', expecting `end'
+app/admin/employees.rb:10: syntax error, unexpected tLABEL, expecting '='
+app/admin/employees.rb:15: syntax error, unexpected `end', expecting end-of-input
+app/admin/employees.rb:10: syntax error, unexpected ':', expecting `end'
+app/admin/employees.rb:10: syntax error, unexpected tLABEL, expecting '='
+app/admin/employees.rb:15: syntax error, unexpected `end', expecting end-of-input
+app/admin/employees.rb:10: syntax error, unexpected ':', expecting `end'
+app/admin/employees.rb:10: syntax error, unexpected tLABEL, expecting '='
+app/admin/employees.rb:15: syntax error, unexpected `end', expecting end-of-input
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/admin/employees/7" for ::1 at 2022-12-27 17:12:16 +0530
+  
+SyntaxError (/home/ubuntu2004/Desktop/komit_ruby_project/logic_assignment/app/admin/employees.rb:10: syntax error, unexpected ':', expecting `end'
+...llection: get_state(employee) : [], selected: employee.emp_s...
+...                              ^
+/home/ubuntu2004/Desktop/komit_ruby_project/logic_assignment/app/admin/employees.rb:10: syntax error, unexpected tLABEL, expecting '='
+...ed: employee.emp_state, prompt: '---select---'
+...                        ^~~~~~~
+/home/ubuntu2004/Desktop/komit_ruby_project/logic_assignment/app/admin/employees.rb:15: syntax error, unexpected `end', expecting end-of-input
+  end
+  ^~~
+):
+  
+app/admin/employees.rb:10: syntax error, unexpected ':', expecting `end'
+app/admin/employees.rb:10: syntax error, unexpected tLABEL, expecting '='
+app/admin/employees.rb:15: syntax error, unexpected `end', expecting end-of-input
+app/admin/employees.rb:10: syntax error, unexpected ':', expecting `end'
+app/admin/employees.rb:10: syntax error, unexpected tLABEL, expecting '='
+app/admin/employees.rb:15: syntax error, unexpected `end', expecting end-of-input
+app/admin/employees.rb:10: syntax error, unexpected ':', expecting `end'
+app/admin/employees.rb:10: syntax error, unexpected tLABEL, expecting '='
+app/admin/employees.rb:15: syntax error, unexpected `end', expecting end-of-input
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/admin/employees/7" for ::1 at 2022-12-27 17:13:35 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Employee"], ["resource_id", 7], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Employee"], ["resource_id", 7], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/show.html.arb (Duration: 33.2ms | Allocations: 29279)
+Completed 200 OK in 61ms (Views: 33.8ms | ActiveRecord: 1.8ms | Allocations: 43819)
+
+
+Started GET "/admin/employees/7/edit" for ::1 at 2022-12-27 17:14:31 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 53.2ms | Allocations: 36882)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 1.4ms | Allocations: 51223)
+
+
+  
+ActionView::Template::Error (undefined method `get_state' for #<ActiveAdmin::Views::ActiveAdminForm:0x00005653ffba1450>
+Did you mean?  get_attribute):
+    1: # frozen_string_literal: true
+    2: insert_tag renderer_for(:edit)
+  
+app/admin/employees.rb:10:in `block (3 levels) in <main>'
+app/admin/employees.rb:5:in `block (2 levels) in <main>'
+Started GET "/admin/employees/7/edit" for ::1 at 2022-12-27 17:15:43 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 61.0ms | Allocations: 36863)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 1.4ms | Allocations: 51256)
+
+
+  
+ActionView::Template::Error (undefined method `get_state' for #<ActiveAdmin::Views::ActiveAdminForm:0x00005653ff084180>
+Did you mean?  get_attribute):
+    1: # frozen_string_literal: true
+    2: insert_tag renderer_for(:edit)
+  
+app/admin/employees.rb:10:in `block (3 levels) in <main>'
+app/admin/employees.rb:5:in `block (2 levels) in <main>'
+Started GET "/admin/employees/7/edit" for ::1 at 2022-12-27 17:15:47 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 46.1ms | Allocations: 36866)
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 2.0ms | Allocations: 51199)
+
+
+  
+ActionView::Template::Error (undefined method `get_state' for #<ActiveAdmin::Views::ActiveAdminForm:0x00005653fe570528>
+Did you mean?  get_attribute):
+    1: # frozen_string_literal: true
+    2: insert_tag renderer_for(:edit)
+  
+app/admin/employees.rb:10:in `block (3 levels) in <main>'
+app/admin/employees.rb:5:in `block (2 levels) in <main>'
+Started GET "/admin/employees/7/edit" for ::1 at 2022-12-27 17:16:21 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::EmployeesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered /usr/local/rvm/gems/ruby-2.7.3/gems/activeadmin-2.12.0/app/views/active_admin/resource/edit.html.arb (Duration: 113.3ms | Allocations: 71561)
+Completed 200 OK in 153ms (Views: 117.4ms | ActiveRecord: 1.4ms | Allocations: 88524)
+
+
